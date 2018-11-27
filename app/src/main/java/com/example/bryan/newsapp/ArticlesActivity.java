@@ -82,6 +82,7 @@ public class ArticlesActivity extends AppCompatActivity {
                         HashMap<String,String> map = new HashMap<>();
                         map.put(TITLE, jsonObject.optString(TITLE).toString());
                         map.put(DESCRIPTION, jsonObject.optString(DESCRIPTION).toString());
+                        map.put(URL,jsonObject.optString(URL).toString());
                         map.put(URLTOIMAGE, jsonObject.optString(URLTOIMAGE).toString());
                         dataArticle.add(map);
                     }
@@ -95,7 +96,11 @@ public class ArticlesActivity extends AppCompatActivity {
                 listView_Articles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                        Log.d(TAG, "onItemClick: "+ dataArticle.get(position).get(URL));
+                        Intent intent = new Intent(ArticlesActivity.this, WebViewActivity.class);
+                        intent.putExtra("sourceKey",sourceKey);
+                        intent.putExtra("url",dataArticle.get(position).get(URL));
+                        startActivity(intent);
                     }
                 });
             }else {

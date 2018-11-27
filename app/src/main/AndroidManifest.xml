@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SourcesActivity" />
-        <activity android:name=".ArticlesActivity"></activity>
+        <activity android:name=".ArticlesActivity" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>

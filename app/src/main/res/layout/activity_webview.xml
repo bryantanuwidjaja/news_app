@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ArticlesActivity">
+    tools:context=".WebViewActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -13,26 +13,26 @@
         android:background="@color/colorPrimary">
 
         <TextView
-            android:id="@+id/textView_ArticlesActivity_Header"
+            android:id="@+id/textView_WebViewActivity_Header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="List of Articles"
+            android:text="title"
             android:textColor="@color/white"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button_ArticlesActivity_Back"
+            app:layout_constraintStart_toEndOf="@+id/button_WebViewActivity_Back"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.538" />
 
         <Button
-            android:id="@+id/button_ArticlesActivity_Back"
+            android:id="@+id/button_WebViewActivity_Back"
             android:layout_width="40dp"
             android:layout_height="35dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,19 +40,13 @@
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
-    <ListView
-        android:id="@+id/listView_ArticlesActivity_Articles"
+    <WebView
+        android:id="@+id/webView_WebViewActivity"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
 
 </android.support.constraint.ConstraintLayout>
