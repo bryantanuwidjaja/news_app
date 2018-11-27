@@ -164,6 +164,16 @@ public class ArticlesActivity extends AppCompatActivity {
 
                 adapter = new ListArticlesAdapter(ArticlesActivity.this,dataArticle);
                 listView_Articles.setAdapter(adapter);
+                listView_Articles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Log.d(TAG, "onItemClick: "+ dataArticle.get(position).get(URL));
+                        Intent intent = new Intent(ArticlesActivity.this, WebViewActivity.class);
+                        intent.putExtra("sourceKey",sourceKey);
+                        intent.putExtra("url",dataArticle.get(position).get(URL));
+                        startActivity(intent);
+                    }
+                });
 
             }else {
                 Toast.makeText(getApplicationContext(), "No News Available", Toast.LENGTH_SHORT).show();
