@@ -15,9 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.transition);
-        ImageView imageView_Logo = findViewById(R.id.imageView_MainActivity_Logo);
         TextView textView_Title = findViewById(R.id.textView_MainActivity_Title);
-        imageView_Logo.startAnimation(animation);
         textView_Title.startAnimation(animation);
         final Intent i = new Intent(this,SourcesActivity.class);
         Thread timer = new Thread()

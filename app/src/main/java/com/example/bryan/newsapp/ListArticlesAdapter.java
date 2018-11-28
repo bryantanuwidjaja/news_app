@@ -1,6 +1,7 @@
 package com.example.bryan.newsapp;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ListArticlesAdapter extends BaseAdapter{
+    private static final String TAG = "ListArticlesAdapter";
     private Activity context;
     private ArrayList<HashMap<String,String>> dataArticle;
 
@@ -53,6 +55,7 @@ public class ListArticlesAdapter extends BaseAdapter{
 
         try{
             textView_ArticleTitle.setText(data.get(ArticlesActivity.TITLE));
+            Log.d(TAG, "getView: "+textView_ArticleTitle);
             textView_ArticleDescription.setText(data.get(ArticlesActivity.DESCRIPTION));
             Picasso.with(context).load(data.get(ArticlesActivity.URLTOIMAGE).toString())
                     .resize(350,200)
@@ -62,4 +65,5 @@ public class ListArticlesAdapter extends BaseAdapter{
 
         return listViewArticle;
     }
+
 }

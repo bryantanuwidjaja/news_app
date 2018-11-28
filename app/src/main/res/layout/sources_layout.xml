@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:background="@drawable/adapter_button"
-        android:elevation="15dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:elevation="5dp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="4dp">
 
         <ImageView
             android:id="@+id/imageView_SourceLayout_sourceLogo"

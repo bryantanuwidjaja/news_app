@@ -4,14 +4,20 @@ public class Sources {
     private String source;
     private int drawable;
     private String sourceKey;
+    private int drawableLogo;
+    private String description;
 
     public Sources() {
 
     }
-    public Sources(String source, int drawable, String sourceKey) {
+
+    public Sources(String source, int drawable, String sourceKey, int drawableLogo, String description) {
         this.source=source;
         this.drawable=drawable;
         this.sourceKey = sourceKey;
+        this.drawableLogo = drawableLogo;
+        this.description = description;
+
     }
 
     public String getSource() {
@@ -36,5 +42,21 @@ public class Sources {
 
     public void setSourceKey(String sourceKey) {
         this.sourceKey = sourceKey;
+    }
+
+    public int getDrawableLogo() {
+        return drawableLogo;
+    }
+
+    public void setDrawableLogo(int drawableLogo) {
+        this.drawableLogo = drawableLogo;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
